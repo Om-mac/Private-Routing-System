@@ -32,7 +32,26 @@
 		<false/>
 		<key>NSAllowsLocalNetworking</key>
 		<true/>
+		<key>NSExceptionDomains</key>
+		<dict>
+			<key>*</key>
+			<dict>
+				<key>NSIncludesSubdomains</key>
+				<true/>
+				<key>NSTemporaryExceptionAllowsInsecureHTTPLoads</key>
+				<true/>
+				<key>NSTemporaryExceptionMinimumTLSVersion</key>
+				<string>TLSv1.2</string>
+			</dict>
+		</dict>
 	</dict>
+	<key>NSBonjourServices</key>
+	<array>
+		<string>_tcp</string>
+		<string>_udp</string>
+	</array>
+	<key>NSLocalNetworkUsageDescription</key>
+	<string>OmChat needs access to your local network to connect to TCP chat server</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string></string>
 	<key>RCTNewArchEnabled</key>
